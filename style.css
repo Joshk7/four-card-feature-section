@@ -41,9 +41,6 @@ h6 {
     overflow-wrap: break-word;
 }
 
-p {
-    text-wrap: pretty;
-}
 h1,
 h2,
 h3,
@@ -68,34 +65,117 @@ h6 {
 body {
     font-family: Poppins;
     font-size: 0.9375rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2.875rem;
+    min-height: 100vh;
+    margin: 5rem 0;
+}
+
+main {
+    margin-top: 5rem;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: clamp(1.5rem, 1.236rem + 1.127vw, 2.25rem);
+    margin-bottom: 1rem;
+    color: var(--dark-blue);
+}
+
+span {
+    font-weight: 600;
 }
 
 .heading {
     max-width: 540px;
+    width: 85%;
     margin: 0 auto;
     text-align: center;
 }
 
-.heading h1 {
-    font-weight: 200;
-    font-size: 2.25rem;
-}
-
-.heading h2 {
-    font-weight: 600;
-    font-size: 2.25rem;
+.heading p {
+    color: var(--dark-blue);
+    opacity: 0.5;
+    font: 0.9375rem/1.66 "Poppins";
 }
 
 .container {
-    /* change the height later */
-
+    max-width: 1110px;
+    width: 85%;
+    margin: 0 auto;
 }
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.middle-cards {
+    max-width: 21.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.75rem;
+}
+
+.card {
+    align-self: center;
+    width: 100%;
+    flex: 1;
+    max-width: 21.875rem;
+    padding: 2rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.25rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.cyan-card::before {
+    background: var(--cyan);
+}
+
+.red-card::before {
+    background: var(--red);
+}
+
+.orange-card::before {
+    background: var(--orange);
+}
+
+.blue-card::before {
+    background: var(--blue);
+}
+
+.card-header {
+    font: 600 1.25rem/auto "Poppins";
+    color: var(--dark-blue);
+}
+
+.card-description {
+    font: 0.8125rem/1.8 "Poppins";
+    letter-spacing: 0.0625;
+    opacity: 0.5;
+}
+
+.card-icon {
+    align-self: flex-end;
+    width: clamp(3.563rem, 3.408rem + 0.657vw, 4rem);
+    margin-top: 2rem;
+}
+
 
 footer {
     position: fixed;
@@ -105,9 +185,15 @@ footer {
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.6875rem;
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1300px) {
+    .card-container {
+        flex-direction: row;
+    }
 }
