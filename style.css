@@ -108,7 +108,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.75rem;
+    gap: 2rem;
 }
 
 .middle-cards {
@@ -116,7 +116,7 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.75rem;
+    gap: 2rem;
 }
 
 .card {
