@@ -67,6 +67,7 @@ body {
     font-size: 0.9375rem;
     min-height: 100vh;
     margin: 5rem 0;
+    background: var(--light-gray);
 }
 
 main {
@@ -146,8 +147,9 @@ span {
 }
 
 .card-header {
-    font: 600 1.25rem/auto "Poppins";
+    font: 600 1.25rem/1 "Poppins";
     color: var(--dark-blue);
+    margin-bottom: 0.5rem;
 }
 
 .card-description {
