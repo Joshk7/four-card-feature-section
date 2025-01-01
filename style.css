@@ -184,7 +184,7 @@ footer {
 
 @media screen and (min-width: 700px) {
     .card-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -194,15 +194,15 @@ footer {
     }
 
     .cyan-card {
-        grid-area: 2 / 1 / 4 / 2
+        grid-area: 2 / 1 / 4 / 2;
     }
 
     .red-card {
-        grid-area: 1 / 2 / 3 / 2
+        grid-area: 1 / 2 / 3 / 2;
     }
 
     .orange-card {
-        grid-area: 3 / 2 / 5 / 2
+        grid-area: 3 / 2 / 5 / 2;
     }
 
     .blue-card {
